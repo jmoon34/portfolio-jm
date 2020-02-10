@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import {Link as NextLink} from '../../routes';
 import '../../styles/main.scss';
 
 class Header extends React.Component {
@@ -31,6 +32,18 @@ class Header extends React.Component {
 				<Link href="/cv">
 					<a>CV </a>
 				</Link>
+
+					<NextLink route='test' params={{id: '2'}}>
+						<a>
+							Test 2
+						</a>
+					</NextLink>
+					<NextLink route='/test/5'>
+						<a>
+							Test 2
+						</a>
+					</NextLink>
+
 				<style jsx>
 					{
 						`

@@ -47,7 +47,7 @@ class Index extends SuperComponent{
 		const { userData, initialData } = this.props;
 		return (
 			<BaseLayout>
-				<h1>{ this.state.title }</h1>
+				<h1>{ this.state.title } git Check!</h1>
 				<h1>{ userData.title }</h1>
 				<button onClick={this.updateTitle}>Change Title</button>
 			</BaseLayout>

@@ -1,55 +1,16 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
-import SuperComponent from '../components/SuperComponent';
-import axios from 'axios';
+import { Button, Container} from 'reactstrap';
 
-class Index extends SuperComponent{
+class Index extends React.Component {
 
-	static async getInitialProps() {
-		let userData = {};
-		try {
-			const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
-			userData = response.data;
-		} catch(err){
-			console.error(err)
-		}
-
-		return {initialData: [1,2,3,4], userData}; // equivalent to userData: userData
-	}
-
-	constructor() {
-		super();
-
-		this.state ={
-			title: 'I am Index Page'
-		}
-	}
-
-	componentDidMount() {
-		console.log('componentDidMount');
-	}
-
-	componentDidUpdate() {
-		console.log('componentDidUpdate')
-	}
-
-	componentWillUnmount() {
-		console.log('componentWillUnmount')
-	}
-
-	updateTitle = () => {
-		this.setState({title: 'yolo'});
-	}
 
 	render() {
-		debugger;
-		const { title } = this.state;
-		const { userData, initialData } = this.props;
+
 		return (
 			<BaseLayout>
-				<h1>{ this.state.title } git Check!</h1>
-				<h1>{ userData.title }</h1>
-				<button onClick={this.updateTitle}>Change Title</button>
+					<Container>
+					</Container>
 			</BaseLayout>
 		)
 	}
@@ -57,8 +18,3 @@ class Index extends SuperComponent{
 
 
 export default Index;
-
-
-//<Header title={'yolo'}>
-//	<h1>I am header subtitle</h1>
-//</Header>

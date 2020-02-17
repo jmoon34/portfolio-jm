@@ -20,8 +20,4 @@ BasePage.defaultProps = {
 	className: ''
 };
 
-BasePage.propTypes = {
-	className: PropTypes.any.isRequired
-}
-
 export default BasePage;

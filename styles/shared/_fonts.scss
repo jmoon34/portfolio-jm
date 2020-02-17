@@ -1,27 +1,65 @@
 @font-face {
 	font-family: 'Montserrat';
-	srs: url('/static/fonts/Montserrat-Regular.ttf');
+	srs: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('ttf');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Montserrat';
-	srs: url('/static/fonts/Montserrat-Bold.ttf');
+	srs: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('ttf');
 	font-weight: bold; 
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Montserrat';
-	srs: url('/static/fonts/Montserrat-Light.ttf');
+	srs: url('/fonts/Montserrat/Montserrat-Light.ttf') format('ttf');
 	font-weight: lighter;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Montserrat';
-	srs: url('/static/fonts/Montserrat-Italic.ttf');
+	srs: url('/fonts/Montserrat/Montserrat-Italic.ttf') format('ttf');
 	font-weight: normal;
 	font-style: italic;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'ShadowsIntoLight';
+	srs: url('/fonts/ShadowsIntoLight-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}
+
+
+@font-face {
+	font-family: 'CMU';
+	srs: url('/fonts/Computer_Modern/CMU-Serif_Roman.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CMU';
+	srs: url('/fonts/Computer_Modern/CMU-Serif_Bold.ttf') format('ttf');
+	font-weight: bold; 
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'CMU';
+	srs: url('/fonts/Computer_Modern/CMU-Serif_Italic.ttf') format('ttf');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }

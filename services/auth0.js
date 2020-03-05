@@ -27,7 +27,6 @@ class Auth0 {
 	}
 
 	setSession(authResult) {
-		debugger;
 		// Set the time that the Access Token will expire at
 		const expiresAt = JSON.stringify((authResult.expiresIn * 1000) * new Date().getTime());
 		//localStorage.setItem('access_token', authResult.accessToken);
@@ -52,9 +51,25 @@ class Auth0 {
 	}
 
 	isAuthenticated = () => {
-		const expiresAt = Cookies.getJson('expiresAt');
+		const expiresAt = Cookies.getJSON('expiresAt');
 		return new Date().getTime() < expiresAt;
 	}
+
+	clientAuth = () => {
+		return this.isAuthenticated();
+	}
+
+	serverAuth = (req) => {
+		if (req.headers.cookie) {
+			const expiresAtCookie = req.headers.cookie.split(';').find(c => c.trim().startsWith('expiresAt='));
+			if (!expiresAtCookie) { return undefined };
+
+			const expiresAt = expiresAtCookie.split('=')[1];
+			return new Date().getTime() < expiresAt;
+		}
+	}
+
+
 }
 
 const auth0Client = new Auth0();
